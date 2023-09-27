@@ -19,6 +19,7 @@ app.use(cookieParser());
 
 app.use('/api', authRoutes);
 app.use('/api', taskRoutes);
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 
 
