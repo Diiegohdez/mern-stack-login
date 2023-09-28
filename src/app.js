@@ -9,8 +9,9 @@ import cors from "cors";
 const app = express();
 
 
+//http://localhost:5173
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://back-end-login.onrender.com',
     credentials: true
 }));
 app.use(morgan('dev'));
