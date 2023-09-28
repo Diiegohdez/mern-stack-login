@@ -11,7 +11,7 @@ const app = express();
 
 //http://localhost:5173
 app.use(cors({
-    origin: 'https://back-end-login.onrender.com',
+    origin: '*',
     credentials: true
 }));
 app.use(morgan('dev'));
