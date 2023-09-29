@@ -11,7 +11,7 @@ const app = express();
 
 //http://localhost:5173
 app.use(cors({
-    origin: '*',
+    origin: 'https://fastidious-cannoli-b879a6.netlify.app',
     credentials: true
 }));
 app.use(morgan('dev'));
@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 app.use('/api', authRoutes);
 app.use('/api', taskRoutes);
-app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 
 
 
