@@ -49,7 +49,11 @@ export const login = async (req, res) => {
 
         const token = await createAcessToke({ id: userFound._id });
 
-        res.cookie("token");
+        res.cookie("token", token, {
+            httpOnly: process.env.NODE_ENV !== "development",
+            secure: true,
+            SameSite: 'Lax'
+        });
         res.json({
             id: userFound._id,
             username: userFound.username,
