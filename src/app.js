@@ -8,10 +8,10 @@ import cors from "cors";
 
 const app = express();
 
-
+//https://imaginative-syrniki-12ebbb.netlify.app
 //http://localhost:5173
 app.use(cors({
-    origin: 'https://fastidious-cannoli-b879a6.netlify.app',
+    origin: 'https://imaginative-syrniki-12ebbb.netlify.app',
     credentials: true
 }));
 app.use(morgan('dev'));
